@@ -59,7 +59,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
 }
 
 .nav h1 {
@@ -70,7 +69,6 @@ header {
 
 .nav ul {
   display: flex;
-  gap: 30px;
   list-style: none;
 }
 
@@ -78,13 +76,18 @@ header {
   text-decoration: none;
   color: var(--primary);
   font-weight: 500;
+  padding: 24px 20px;
 }
 
-.dropbtn {
+.nav a:hover{
+  background-color: #88b8e6;
   color: white;
-  font-size: 16px;
-  border: none;
 }
+
+.nav img{
+  margin: 20px 0;
+}
+
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
@@ -111,13 +114,10 @@ header {
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {background-color: #88b8e6;}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-a:hover {color: var(--secondary);}
 
 
 
@@ -186,7 +186,9 @@ a:hover {color: var(--secondary);}
   border-radius: 6px;
 }
 
-
+footer{
+  position: absolute;
+}
 
 .footer {
   background: var(--green);
@@ -194,6 +196,9 @@ a:hover {color: var(--secondary);}
   padding: 40px 0;
   text-align: center;
   font-size: 14px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
 }
 
 button {
