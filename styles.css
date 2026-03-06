@@ -77,6 +77,7 @@ header {
   color: var(--primary);
   font-weight: 500;
   padding: 24px 20px;
+  transition: background-color 0.25s ease
 }
 
 .nav a:hover{
@@ -89,12 +90,10 @@ header {
 }
 
 
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -105,21 +104,24 @@ header {
   z-index: 1;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  transition: background-color 0.25s ease
 }
 
-/* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: #88b8e6;}
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
-
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.15);
+}
 
 .hero {
   background: var(--primary);
@@ -180,10 +182,31 @@ header {
 
 .card {
   background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   padding: 30px;
   text-align: center;
   border: 1px solid #eaeaea;
   border-radius: 6px;
+}
+
+.card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.15);
+}
+
+.contact{
+  text-align: center;
+}
+
+.contact p{
+  position: relative;
+  left: 150px;
 }
 
 footer{
@@ -220,4 +243,44 @@ button:hover {
   .hero h2 {
     font-size: 30px;
   }
+}
+
+
+
+form {
+  margin-top: 20px;
+}
+
+form input {
+  padding: 12px;
+  width: 250px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.member h3{
+  color: white;
+}
+
+.member.card{
+  text-align: center;
+}
+
+.newsletter{
+  background-color: var(--accent);
+  color: white;
+}
+
+.newsletter h3{
+  color: white;
+}
+
+.policy{
+  text-align: center;
+}
+
+.policy p{
+  position: relative;
+  left: 150px;
 }
